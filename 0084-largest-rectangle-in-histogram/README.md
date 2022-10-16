@@ -23,4 +23,4 @@ The largest rectangle is shown in the red area, which has an area = 10 units.
 	<li><code>0 &lt;= heights[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
 </div>
-8b6f165d69d744503d845a055b116772e3ffd0ef
+https://takeuforward.org/data-structure/area-of-largest-rectangle-in-histogram/
