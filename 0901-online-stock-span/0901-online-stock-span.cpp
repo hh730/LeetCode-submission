@@ -3,9 +3,8 @@ public:
     stack<pair<int,int>>st;
     int index;
     StockSpanner() {
-        while(!st.empty()){
-            st.pop();
-        }
+        ios::sync_with_stdio(false);
+        cin.tie(0);
         index=-1;
     }
     
