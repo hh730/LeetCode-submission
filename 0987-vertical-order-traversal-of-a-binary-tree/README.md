@@ -1,4 +1,6 @@
-<h2><a href="https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/">987. Vertical Order Traversal of a Binary Tree</a></h2><h3>Hard</h3><hr><div><p>Given the <code>root</code> of a binary tree, calculate the <strong>vertical order traversal</strong> of the binary tree.</p>
+<h2><a href="https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/">987. Vertical Order Traversal of a Binary Tree</a></h2><h3>Hard</h3>
+<h2><a href="https://www.youtube.com/watch?v=q_a6lpbKJdw">solution video</a></h2>
+<hr><div><p>Given the <code>root</code> of a binary tree, calculate the <strong>vertical order traversal</strong> of the binary tree.</p>
 
 <p>For each node at position <code>(row, col)</code>, its left and right children will be at positions <code>(row + 1, col - 1)</code> and <code>(row + 1, col + 1)</code> respectively. The root of the tree is at <code>(0, 0)</code>.</p>
 
@@ -48,4 +50,3 @@ Note that the solution remains the same since 5 and 6 are in the same location a
 	<li><code>0 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
 </div>
-<h2><a href="https://www.youtube.com/watch?v=q_a6lpbKJdw">solution video</a></h2>
