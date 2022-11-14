@@ -48,3 +48,4 @@ Note that the solution remains the same since 5 and 6 are in the same location a
 	<li><code>0 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
 </div>
+<h2><a href="https://www.youtube.com/watch?v=q_a6lpbKJdw">solution video</a></h2>
