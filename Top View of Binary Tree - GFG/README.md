@@ -1,4 +1,5 @@
 # Top View of Binary Tree
+<h2><a href="https://www.youtube.com/watch?v=Et9OCDNvJ78&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=24">Solution video</a></h2>
 ## Medium
 <div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given below is a binary tree. The task is to print the top view of binary tree. Top view of a binary tree is the set of nodes visible when the tree is viewed from the top. For the given below tree</span></p>
 
