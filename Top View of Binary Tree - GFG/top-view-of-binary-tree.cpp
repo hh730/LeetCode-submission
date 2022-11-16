@@ -102,54 +102,60 @@ class Solution
     public:
     //Function to return a list of nodes visible from the top view 
     //from left to right in Binary Tree.
-    void traversal(Node*root,map<int,pair<int,int>>&mp,int ind,int h){
-      if(root==NULL){
-          return;
-      }
-      if(mp.find(ind)==mp.end()){
-      mp[ind]={h,root->data};
-      }
-      else{
-          if(mp[ind].first>h){
-              mp[ind]={h,root->data};
-          }
-      }
-      traversal(root->left,mp,ind-1,h+1);
-      traversal(root->right,mp,ind+1,h+1);
-  }
+    
+    //Recursive solution
+    
+//     void traversal(Node*root,map<int,pair<int,int>>&mp,int ind,int h){
+//       if(root==NULL){
+//           return;
+//       }
+//       if(mp.find(ind)==mp.end()){
+//       mp[ind]={h,root->data};
+//       }
+//       else{
+//           if(mp[ind].first>h){
+//               mp[ind]={h,root->data};
+//           }
+//       }
+//       traversal(root->left,mp,ind-1,h+1);
+//       traversal(root->right,mp,ind+1,h+1);
+//   }
     vector<int> topView(Node *root)
     {
         //Your code here
-        map<int,pair<int,int>>mp;
-        traversal(root,mp,0,0);
-        vector<int>ans;
-        for(auto x:mp){
-            ans.push_back(x.second.second);
-        }
-        return ans;
-        // vector<int> ans; 
-        // if(root == NULL) return ans; 
-        // map<int,int> mpp; 
-        // queue<pair<Node*, int>> q; 
-        // q.push({root, 0}); 
-        // while(!q.empty()) {
-        //     auto it = q.front(); 
-        //     q.pop(); 
-        //     Node* node = it.first; 
-        //     int line = it.second; 
-        //     if(mpp.find(line) == mpp.end()) mpp[line] = node->data;  
-        //     if(node->left != NULL) {
-        //         q.push({node->left, line-1}); 
-        //     }
-        //     if(node->right != NULL) {
-        //         q.push({node->right, line + 1}); 
-        //     }
+        // recursive solution
+        // map<int,pair<int,int>>mp;
+        // traversal(root,mp,0,0);
+        // vector<int>ans;
+        // for(auto x:mp){
+        //     ans.push_back(x.second.second);
         // }
+        // return ans;
         
-        // for(auto it : mpp) {
-        //     ans.push_back(it.second); 
-        // }
-        // return ans;  
+        // level order solution
+        
+        vector<int> ans; 
+        if(root == NULL) return ans; 
+        map<int,int> mpp; 
+        queue<pair<Node*, int>> q; 
+        q.push({root, 0}); 
+        while(!q.empty()) {
+            auto it = q.front(); 
+            q.pop(); 
+            Node* node = it.first; 
+            int line = it.second; 
+            if(mpp.find(line) == mpp.end()) mpp[line] = node->data;  
+            if(node->left != NULL) {
+                q.push({node->left, line-1}); 
+            }
+            if(node->right != NULL) {
+                q.push({node->right, line + 1}); 
+            }
+        }
+        for(auto it : mpp) {
+            ans.push_back(it.second); 
+        }
+        return ans;  
     }
 
 };
