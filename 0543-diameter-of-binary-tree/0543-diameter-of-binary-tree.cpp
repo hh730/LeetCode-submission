@@ -11,22 +11,50 @@
  */
 class Solution {
 public:
-    int height(TreeNode* root){
+    // int height(TreeNode* root){
+    //     if(root==NULL){
+    //         return 0;
+    //     }
+    //     int leftHeight=height(root->left);
+    //     int rightHeight=height(root->right);
+    //     return 1+max(leftHeight,rightHeight);
+    // }
+    
+    //Better approach
+    
+    pair<int,int> heightDiameter(TreeNode* root){
         if(root==NULL){
-            return 0;
+            pair<int,int>ans;
+            ans.first=0;
+            ans.second=0;
+            return ans;
         }
-        int leftHeight=height(root->left);
-        int rightHeight=height(root->right);
-        return 1+max(leftHeight,rightHeight);
+        pair<int,int>leftAns=heightDiameter(root->left);
+        pair<int,int>rightAns=heightDiameter(root->right);
+        int leftDia=leftAns.first;
+        int leftHeight=leftAns.second;
+        int rightDia=rightAns.first;
+        int rightHeight=rightAns.second;
+        int height=1+max(leftHeight,rightHeight);
+        int dia=max(leftHeight+rightHeight,max(leftDia,rightDia));
+        pair<int,int>ans;
+        ans.first=dia;
+        ans.second=height;
+        return ans;
     }
     int diameterOfBinaryTree(TreeNode* root) {
-        if(root==NULL){
-            return 0;
-        }
-        int leftDiameter=diameterOfBinaryTree(root->left);
-        int rightDiameter=diameterOfBinaryTree(root->right);
-        int lh=height(root->left);
-        int rh=height(root->right);
-        return max(lh+rh,max(leftDiameter,rightDiameter));
+        // if(root==NULL){
+        //     return 0;
+        // }
+        // int leftDiameter=diameterOfBinaryTree(root->left);
+        // int rightDiameter=diameterOfBinaryTree(root->right);
+        // int lh=height(root->left);
+        // int rh=height(root->right);
+        // return max(lh+rh,max(leftDiameter,rightDiameter));
+        
+        //better approach
+        
+        pair<int,int>ans=heightDiameter(root);
+        return ans.first;
     }
 };
