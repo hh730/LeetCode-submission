@@ -15,10 +15,24 @@ public:
         if(root==NULL){
             return 0;
         }
-        int leftAns=max(0,maxPathDown(root->left,maxSum));
-        int rightAns=max(0,maxPathDown(root->right,maxSum));
-        maxSum=max(maxSum,leftAns+rightAns+root->val);
-        return max(leftAns,rightAns)+root->val;
+        //Way 1
+        
+        // int leftAns=max(0,maxPathDown(root->left,maxSum));
+        // int rightAns=max(0,maxPathDown(root->right,maxSum));
+        // maxSum=max(maxSum,leftAns+rightAns+root->val);
+        // return max(leftAns,rightAns)+root->val;
+        
+        //Way 2
+        
+        int leftAns=maxPathDown(root->left,maxSum);
+        int rightAns=maxPathDown(root->right,maxSum);
+        
+        // calculate max sum if only one side to be included or root 
+        
+        int temp=max(max(leftAns,rightAns)+root->val,root->val);
+        int res=max(temp,leftAns+rightAns+root->val);
+        maxSum=max(maxSum,res);
+        return temp;
     }
     int maxPathSum(TreeNode* root) {
         int maxSum=INT_MIN;
