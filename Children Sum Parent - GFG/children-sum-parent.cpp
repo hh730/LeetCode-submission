@@ -108,10 +108,7 @@ class Solution{
     int isSumProperty(Node *root)
     {
      // Add your code here
-     if(root==NULL){
-         return 1;
-     }
-     if(root->left==NULL&&root->right==NULL){
+     if(root==NULL||root->left==NULL&&root->right==NULL){
          return 1;
      }
      int sum=0;
