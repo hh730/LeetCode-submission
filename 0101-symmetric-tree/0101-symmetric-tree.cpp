@@ -12,14 +12,8 @@
 class Solution {
 public:
     bool isSymmetricHelper(TreeNode* root1,TreeNode*root2){
-        if(root1==NULL&&root2==NULL){
-            return true;
-        }
-        if(root1==NULL&&root2!=NULL){
-            return false;
-        }
-        if(root1!=NULL&&root2==NULL){
-            return false;
+        if(root1==NULL || root2==NULL){
+            return root1==root2;
         }
         if(root1->val!=root2->val){
             return false;
@@ -33,11 +27,5 @@ public:
             return true;
         }
         return isSymmetricHelper(root->left,root->right);
-        // if(root->left->val!=root->right->val){
-        //     return false;
-        // }
-        // bool isLeftSymmetric=isSymmetric(root->left);
-        // bool isRightSymmetric=isSymmetric(root->right);
-        // return isLeftSymmetric&&isRightSymmetric;
     }
 };
