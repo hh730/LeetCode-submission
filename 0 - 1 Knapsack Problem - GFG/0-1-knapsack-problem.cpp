@@ -8,6 +8,7 @@ class Solution
 {
     public:
     //Function to return max value that can be put in knapsack of capacity W.
+    // int knapSackHelper(int wt[],int val[],int W,int n,int**memo){
     int knapSackHelper(int wt[],int val[],int W,int n,vector<vector<int>>&memo){
         if(n==0||W==0){
             return 0;
@@ -24,9 +25,15 @@ class Solution
             return memo[n][W];
         }
     }
-    int knapSack(int W, int wt[], int val[], int n) 
-    { 
-       // Your code here
+    int knapSack(int W, int wt[], int val[], int n) { 
+    // int** memo;
+    // memo = new int*[n+1];
+    // for (int i = 0; i <= n; i++){
+    //     memo[i] = new int[W + 1];
+    //     for(int j=0;j<=W;j++){
+    //         memo[i][j]=-1;
+    //     }
+    // }
        vector<vector<int>>memo(n+1,vector<int>(W+1,-1));
        knapSackHelper(wt,val,W,n,memo);
        return memo[n][W];
