@@ -28,17 +28,30 @@ bool isSubsetSum(int arr[],int n,int sum,vector<vector<int>>&dp){
             sum+=abs(arr[i]);
         }
         sum=abs(sum);
-        vector<int>range(sum+1,0);
+        // vector<int>range(sum+1,0);
         vector<vector<int>>dp(n+1,vector<int>(sum+1,-1));
-        for(int i=0;i<sum+1;i++){
-            range[i]=isSubsetSum(arr,n,i,dp);
+        vector<int>v;
+          for(int i=0;i<(sum+1);i++){
+              isSubsetSum(arr,n,i,dp);
         }
-        int ans=INT_MAX;
-        for(int i=0;i<range.size();i++){
-            if(range[i]==1){
-                int s2=sum-i;
-                ans=min(ans,abs(s2-i));
+        for(int i=0;i<(sum/2+1);i++){
+            if(dp[n][i]){
+                v.push_back(i);
             }
+        }
+        // for(int i=0;i<sum+1;i++){
+        //     range[i]=isSubsetSum(arr,n,i,dp);
+        // }
+        // int ans=INT_MAX;
+        // for(int i=0;i<range.size();i++){
+        //     if(range[i]==1){
+        //         int s2=sum-i;
+        //         ans=min(ans,abs(s2-i));
+        //     }
+        // }
+        int ans=INT_MAX;
+        for(int i=0;i<v.size();i++){
+            ans=min(ans,sum-2*v[i]);
         }
         return ans;
 	} 
