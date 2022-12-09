@@ -63,6 +63,32 @@ public:
                 }
             }
         }
+        
         return dp[n][m];
+        
+        //Print lomgest common subsequence
+        
+//         string s="";
+        
+//         int i=n;
+//         int j=m;
+//         while(i>0&&j>0){
+//             if(text1[i-1]==text2[j-1]){
+//                 s.push_back(text1[i-1]);
+//                 i--;
+//                 j--;
+//             }
+//             else{
+//                 if(dp[i][j-1]>dp[i-1][j]){
+//                     j--;
+//                 }
+//                 else{
+//                     i--;
+//                 }
+//             }
+//         }
+//         reverse(s.begin(),s.end());
+//         cout<<s<<endl;
+        
     }
 };
