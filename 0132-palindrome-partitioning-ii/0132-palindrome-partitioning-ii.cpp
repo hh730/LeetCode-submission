@@ -1,20 +1,22 @@
 class Solution {
 public:
-    // bool isPalindrome(string s,int si,int ei){
-    //     while(si<=ei){
-    //         if(s[si++]!=s[ei--]){
-    //             return false;
-    //         }
-    //     }
-    //     return true;
-    // }
-    bool isPalindrome (string & s, int i, int j){
-        while(i<=j){
-            if(s[i]!=s[j]) return false;
-            i++; j--;
+    bool isPalindrome(string &s,int si,int ei){
+        while(si<=ei){
+            if(s[si]!=s[ei]){
+                return false;
+            }
+            si++;
+            ei--;
         }
         return true;
     }
+    // bool isPalindrome (string & s, int i, int j){
+    //     while(i<=j){
+    //         if(s[i]!=s[j]) return false;
+    //         i++; j--;
+    //     }
+    //     return true;
+    // }
     // int solve(string s,int i,int j,vector<vector<int>>&dp){
     int solve(string s,int i,int j,vector<int>&dp){
         if(i>=j||isPalindrome(s,i,j)){
