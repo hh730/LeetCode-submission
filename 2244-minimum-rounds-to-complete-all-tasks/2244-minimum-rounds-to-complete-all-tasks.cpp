@@ -9,18 +9,14 @@ public:
         int count=0;
         for(auto x:mp){
             int a=x.second;
-                if(a<2){
-                    return -1;
-                }
-            while(a>0){
-                if(a>=3){
-                    a=a-3;
-                    count++;
-                }
-                else if(a>0){
-                    a=a-2;
-                    count++;
-                }
+            if(a<2){
+                return -1;
+            }
+            if(a%3==0){
+                count += a/3;
+            }
+            else{
+                count += a/3 + 1;
             }
         }
         return count;
