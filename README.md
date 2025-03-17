@@ -8,6 +8,7 @@
 | ------- |
 | [0001-two-sum](https://github.com/hh730/LeetCode-submission/tree/master/0001-two-sum) |
 | [0967-minimum-falling-path-sum](https://github.com/hh730/LeetCode-submission/tree/master/0967-minimum-falling-path-sum) |
+| [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/hh730/LeetCode-submission/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
 ## Hash Table
 |  |
 | ------- |
@@ -20,4 +21,12 @@
 |  |
 | ------- |
 | [0967-minimum-falling-path-sum](https://github.com/hh730/LeetCode-submission/tree/master/0967-minimum-falling-path-sum) |
+## Stack
+|  |
+| ------- |
+| [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/hh730/LeetCode-submission/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
+## Monotonic Stack
+|  |
+| ------- |
+| [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/hh730/LeetCode-submission/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
 <!---LeetCode Topics End-->
