@@ -18,6 +18,7 @@
 |  |
 | ------- |
 | [0967-minimum-falling-path-sum](https://github.com/hh730/LeetCode-submission/tree/master/0967-minimum-falling-path-sum) |
+| [1170-shortest-common-supersequence](https://github.com/hh730/LeetCode-submission/tree/master/1170-shortest-common-supersequence) |
 ## Matrix
 |  |
 | ------- |
@@ -38,4 +39,8 @@
 |  |
 | ------- |
 | [1762-furthest-building-you-can-reach](https://github.com/hh730/LeetCode-submission/tree/master/1762-furthest-building-you-can-reach) |
+## String
+|  |
+| ------- |
+| [1170-shortest-common-supersequence](https://github.com/hh730/LeetCode-submission/tree/master/1170-shortest-common-supersequence) |
 <!---LeetCode Topics End-->
